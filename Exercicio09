@@ -1,0 +1,32 @@
+package Trabalhobimestral;
+import java.util.Scanner;
+public class ExercicioArray02
+{
+	public static void main (String[] args)
+	{
+		Scanner scanner = new Scanner(System.in);
+		String[] nomesAlunos = new String[3];
+		double [][] notasAlunos = new double [3][2];
+		
+		for (int i = 0; i < 3; i++)
+		
+		{
+			System.out.println("Digite o nome do Aluno: " + (i+1) + ":");
+			nomesAlunos[i] = scanner.nextLine();
+			
+			System.out.println("Digite a nota do primeiro Bimestre " + (i+1) + ":");
+			notasAlunos[i][0] = scanner.nextDouble();
+			
+			System.out.println("Digite a nota do Segundo Bimestre " + (i+1) + ":");
+			notasAlunos[i][1] = scanner.nextDouble();
+			
+			scanner.nextLine();	
+		}
+		System.out.println("/mMédias dos alunos: ");
+		for (int i = 0; i < 3; i++) {
+			double media = (notasAlunos [i][0] + notasAlunos[i][1]);
+			System.out.println(nomesAlunos[i] + ": " + media);
+		}
+		scanner.close();
+	}
+}
